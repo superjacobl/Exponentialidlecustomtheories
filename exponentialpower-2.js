@@ -433,7 +433,7 @@ var initialize = () => {
     // k
     {
         let getDesc = (level) => "k=" + getK(level).toString(0)
-        k = theory.createUpgrade(0, currency, new FirstFreeCost(new ExponentialCost(10, Math.log2(1.5))))
+        k = theory.createUpgrade(0, currency, new FirstFreeCost(new ExponentialCost(0.000001, Math.log2(1.5))))
         k.getDescription = (_) => Utils.getMath(getDesc(k.level))
         k.getInfo = (amount) => Utils.getMathTo(getDesc(k.level), getDesc(k.level + amount))
     }
