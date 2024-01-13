@@ -1250,3 +1250,13 @@ class Popups {
                     })
                 ]
             })
+        })
+        return popup
+    }
+
+    static get settings() {
+        throw new Error("Work in progress")
+    }
+}
+
+initialize()
