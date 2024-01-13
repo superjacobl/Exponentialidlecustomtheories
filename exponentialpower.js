@@ -442,7 +442,7 @@ var initialize = () => {
     {
         let getDesc = (level) => "c_1=" + getC1(level).toString(1)
         c1 = theory.createUpgrade(1, currency, new CustomCost(
-            level => 15 * getStepwisePowerProduct(level, 2, 50, 0)
+            level => 0.0001 * getStepwisePowerProduct(level, 2, 50, 0)
         ))
         c1.getDescription = (_) => Utils.getMath(getDesc(c1.level))
         c1.getInfo = (amount) => Utils.getMathTo(getDesc(c1.level), getDesc(c1.level + amount))
